@@ -1,0 +1,15 @@
+{
+  "name": "nou",
+  "version": "1.0.0",
+  "main": "index.html#header05-1",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

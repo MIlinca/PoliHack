@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Site made with Mobirise Website Builder v5.9.8, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.9.8, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/mbr-96x96.jpg" type="image/x-icon">
+  <meta name="description" content="">
+
+
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap">
+  </noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
+
+
+
+</head>
+
+<body>
+
+  <section data-bs-version="5.1" class="menu menu2 cid-tJS6tZXiPa" once="menu" id="menu02-1m">
+
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <a href="https://mobirise.com">
+              <img src="assets/images/mbr-96x96.jpg" alt="Mobirise Website Builder" style="height: 3rem;">
+            </a>
+          </span>
+          <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-4"
+              href="index.html#header05-1">AlzBuddy</a></span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="index.html#header01-7">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="index.html#features04-w"
+                aria-expanded="false">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="index.html#contacts02-9">Contacts</a>
+            </li>
+          </ul>
+
+          <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="addpacient.html">Add a
+              person in care<br></a></div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <section data-bs-version="5.1" class="features20 cid-tXWuwZwZXh" id="features026-1p">
+
+
+
+
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-12 mb-0 content-head">
+          <h3 class="mbr-section-title mbr-fonts-style align-center display-2">
+            <strong>Dashboard</strong>
+          </h3>
+
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="item features-without-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+
+              <h5 class="card-title mbr-fonts-style display-5">
+                <strong>Temperature</strong>
+              </h5>
+              <div class="progress-bar">
+                <div class="progress-bar-value">20°C</div>
+                <div class="progress-bar-fill" style="width: 25%;"></div>
+              </div>
+
+              <script>
+                class ProgressBar {
+                  constructor(element, initialValue = 0) {
+                    this.valueElem = element.querySelector('.progress-bar-value');
+                    this.fillElem = element.querySelector('.progress-bar-fill');
+
+                    this.setValue(initialValue);
+                  }
+
+                  setValue(newValue) {
+                    if (newValue < 0) {
+                      newValue = 0;
+                    }
+
+                    if (newValue > 50) {
+                      newValue = 20;
+                    }
+
+                    this.value = newValue;
+                    this.update();
+                  }
+
+                  update() {
+                    const percentage = this.value + '%';
+
+                    this.fillElem.style.width = percentage;
+                    this.valueElem.textContent = this.value + '°C'; // Update the temperature value
+
+                    const ranges = [
+                      { min: -Infinity, max: 0, color: 'red' },
+                      { min: 0, max: 15, color: 'red' },
+                      { min: 16, max: 19, color: 'orange' },
+                      { min: 19, max: 25, color: 'green' },
+                      { min: 26, max: 34, color: 'orange' },
+                      { min: 35, max: 50, color: 'red' },
+                    ];
+
+                    const color = ranges.find(range => this.value >= range.min && this.value <= range.max).color;
+
+                    // Set the background color of the progress bar fill
+                    this.fillElem.style.background = color;
+                  }
+                }
+
+                // Extract the numeric value from the initial temperature string (e.g., '25°C')
+                const initialTemperature = parseFloat(document.querySelector('.progress-bar-value').textContent);
+
+                new ProgressBar(document.querySelector('.progress-bar'), initialTemperature);
+              </script>
+
+
+              <p class="card-text mbr-fonts-style display-7">Here you can check the temperature inside the pacient's
+                house.</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="item features-without-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+              <h5 class="card-title mbr-fonts-style display-5">
+                <strong>Sink</strong>
+              </h5>
+              <div class="progress-bar1">
+                <div class="progress-bar-value1">2</div>
+                <div class="progress-bar-fill1" style="width: 33.33%;"></div>
+              </div>
+              <script>
+                class ProgressBar1 {
+                  constructor(element, initialValue = 0) {
+                    this.valueElem = element.querySelector('.progress-bar-value1');
+                    this.fillElem = element.querySelector('.progress-bar-fill1');
+
+                    this.setValue(initialValue);
+                  }
+
+                  setValue(newValue) {
+                    if (newValue < 0) {
+                      newValue = 0
+                    }
+
+                    if (newValue > 3) {
+                      newValue = 3;
+                    }
+
+                    this.value = newValue;
+                    this.update();
+                  }
+
+                  update() {
+                    const level = this.value;
+
+                    const colorMap = {
+                      1: 'green',
+                      2: 'orange',
+                      3: 'red'
+                    };
+
+                    const color = colorMap[level] || 'red'; // Default to red if level is not in the map
+
+                    this.fillElem.style.width = level * 33.33 + '%';
+                    this.valueElem.textContent = this.value; // Update the level
+
+                    // Set the background color of the progress bar fill
+                    this.fillElem.style.background = color;
+                  }
+
+                }
+
+                // Extract the numeric value from the initial level string (e.g., '1')
+                const initialLevel = parseFloat(document.querySelector('.progress-bar-value1').textContent);
+
+                new ProgressBar1(document.querySelector('.progress-bar1'), initialLevel);
+              </script>
+              <p class="card-text mbr-fonts-style display-7">
+                Here you can check if the water in the sink has a safe water level.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item features-without-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+
+              <h5 class="card-title mbr-fonts-style display-5">
+                <strong>Gas</strong>
+              </h5>
+
+              <p class="card-text mbr-fonts-style display-7">
+                Here you can check if the monoxid level inside the house is safe.</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="item features-without-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+
+              <h5 class="card-title mbr-fonts-style display-5">
+                <strong>Fridge</strong>
+              </h5>
+
+              <div class="progress-bar2">
+                <div class="progress-bar-value2">1</div>
+                <div class="progress-bar-fill2" style="width: 50%;"></div>
+              </div>
+              <script>
+                class ProgressBar2 {
+                  constructor(element, initialValue = 0) {
+                    this.valueElem = element.querySelector('.progress-bar-value2');
+                    this.fillElem = element.querySelector('.progress-bar-fill2');
+
+                    this.setValue(initialValue);
+                  }
+
+                  setValue(newValue) {
+                    if (newValue < 0) {
+                      newValue = 0
+                    }
+
+                    if (newValue > 2) {
+                      newValue = 2;
+                    }
+
+                    this.value = newValue;
+                    this.update();
+                  }
+
+                  update() {
+                    const level2 = this.value;
+
+                    const colorMap = {
+                      1: 'green',
+                      2: 'red',
+                      
+                    };
+
+                    const color = colorMap[level2] || 'red'; // Default to red if level is not in the map
+
+                    this.fillElem.style.width = level2 * 50 + '%';
+                    this.valueElem.textContent = this.value; // Update the level
+
+                    // Set the background color of the progress bar fill
+                    this.fillElem.style.background = color;
+                  }
+
+                }
+
+                // Extract the numeric value from the initial level string (e.g., '1')
+                const initialLevel2 = parseFloat(document.querySelector('.progress-bar-value2').textContent);
+
+                new ProgressBar2(document.querySelector('.progress-bar2'), initialLevel2);
+              </script>
+
+              <p class="card-text mbr-fonts-style display-7">
+                Here you can check if the fridge door is closed or not.</p>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section data-bs-version="5.1" class="list04 cid-tXWwYSXUiC" id="list04-1q">
+
+
+
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="card col-md-12 col-lg-10">
+          <div class="card-wrapper">
+            <div class="row justify-content-center">
+              <div class="col-12 mb-5 content-head">
+                <h3 class="card-title mbr-fonts-style mbr-white mt-3 display-2"><strong>People in care</strong></h3>
+                <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                  Here you can see the persons in your care&nbsp;</h5>
+                  <table class="content-table">
+                    <thead>
+                      <tr>
+                        
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Doctor</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Domenic</td>
+                        <td>Ceahlau 75 </td>
+                        <td>Dr Max </td>
+                      </tr>
+                      <tr>
+                        <td>Nick</td>
+                        <td>Observator 787843</td>
+                        <td>Doctor Bun</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+
+            <div class="row justify-content-left item features-without-image mt-0 mb-5 active">
+              <div class="col-12 col-md-12 col-lg-3">
+                <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-7"></h5>
+              </div>
+              <div class="col-md-12 col-lg item-wrapper">
+                <p class="mbr-text mbr-fonts-style mt-0 mb-0 display-7"></p>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-bs-version="5.1" class="footer1 programm5 cid-tJS9NNcTLZ" once="footers" id="footer03-1n">
+
+
+
+
+
+    <div class="container">
+      <div class="row">
+
+        <div class="row-links mb-4">
+          <ul class="header-menu">
+
+
+
+
+            <li class="header-menu-item mbr-fonts-style display-5"><a href="index.html#header01-7"
+                class="text-info">About</a></li>
+            <li class="header-menu-item mbr-fonts-style display-5"><a href="index.html#features04-w"
+                class="text-info">Services</a></li>
+            <li class="header-menu-item mbr-fonts-style display-5"><a href="index.html#contacts02-9"
+                class="text-info">Contacts</a></li>
+            <li class="header-menu-item mbr-fonts-style display-5"><a href="index.html#gallery02-v"
+                class="text-info">Works</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12">
+          <div class="social-row">
+            <div class="soc-item">
+              <a href="https://mobiri.se/" target="_blank">
+                <span class="mbr-iconfont socicon socicon-facebook display-7"></span>
+              </a>
+            </div>
+            <div class="soc-item">
+              <a href="https://mobiri.se/" target="_blank">
+                <span class="mbr-iconfont socicon-twitter socicon"></span>
+              </a>
+            </div>
+            <div class="soc-item">
+              <a href="https://mobiri.se/" target="_blank">
+                <span class="mbr-iconfont socicon-instagram socicon"></span>
+              </a>
+            </div>
+            <div class="soc-item">
+              <a href="https://mobiri.se/" target="_blank">
+                <span class="mbr-iconfont socicon-tiktok socicon"></span>
+              </a>
+            </div>
+            <div class="soc-item">
+              <a href="https://mobiri.se/" target="_blank">
+                <span class="mbr-iconfont socicon-youtube socicon"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-5">
+          <p class="mbr-fonts-style copyright display-7">
+            © Copyright 2023 Mobirise - All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/ytplayer/index.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+
+
+  <input name="animation" type="hidden">
+</body>
+
+</html>
